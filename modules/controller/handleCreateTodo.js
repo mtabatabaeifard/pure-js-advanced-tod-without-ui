@@ -87,6 +87,7 @@ mainList.addEventListener("click", (e) => {
     const filtredTodos = getLocatedTodos().filter(
       (item) => item.id !== Number(id)
     );
+    savedTodos = filtredTodos;
     localStorage.setItem("todosList", JSON.stringify(filtredTodos));
     mainList.innerHTML = "";
     renderTodoElements();
